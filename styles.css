@@ -257,8 +257,13 @@ p { margin: 0; }
   inset: -10% -20% 0 -20%;
   background: radial-gradient(60% 60% at 50% 40%, rgba(184, 148, 94, 0.22) 0%, transparent 70%);
 }
+.hero-photo-frame {
+  position: relative;
+  display: inline-block;
+}
 .hero-visual img {
   position: relative;
+  display: block;
   max-height: 620px;
   width: auto;
   filter: drop-shadow(0 30px 40px rgba(0,0,0,0.35));
@@ -266,22 +271,23 @@ p { margin: 0; }
 .hero-badge {
   position: absolute;
   z-index: 3;
-  left: 4%;
-  top: 12%;
+  left: 12px;
+  top: -84px;
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(20, 35, 46, 0.72);
+  background: rgba(20, 35, 46, 0.9);
   border: 1px solid rgba(184, 148, 94, 0.4);
   backdrop-filter: blur(8px);
   padding: 14px 18px;
   box-shadow: 0 16px 34px rgba(0,0,0,0.3);
+  white-space: nowrap;
 }
 .hero-badge-star { color: var(--brass); font-size: 20px; }
 .hero-badge strong { display: block; font-family: var(--font-display); font-size: 20px; line-height: 1; color: var(--porcelain); }
 .hero-badge small { font-family: var(--font-mono); font-size: 10.5px; color: rgba(246,240,228,0.7); letter-spacing: 0.03em; }
 @media (max-width: 900px) {
-  .hero-badge { left: 50%; transform: translateX(-50%); top: -18px; }
+  .hero-badge { left: 50%; transform: translateX(-50%); top: -80px; }
 }
 
 /* ---------- SECTION SHARED ---------- */
